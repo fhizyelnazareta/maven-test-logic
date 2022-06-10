@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-stop{
+    display: none;
+}
+.btn-start{
+    display: block;
+}
