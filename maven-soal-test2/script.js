@@ -23,17 +23,24 @@ function chartView(angka) {
   chart.render();
 }
 
-function start(){
+function runGenerate(){
   const angka = parseInt($("#angka").val())
+  $("#chartContainer").show()
   chartView(angka)
-  console.log(typeof angka)
   $("#btn-start").removeAttr("style").hide()
   $("#btn-stop").show()
 }
+
+const start = function(){
+    runGenerate()
+    setInterval(function(){
+      runGenerate()
+    }, 3000)
+    $("#btn-start").removeAttr("style").hide()
+    $("#btn-stop").show()
+}
 function stop(){
-  $("#chartContainer").removeAttr("style").hide()
-  $("#btn-stop").removeAttr("style").hide()
-  $("#btn-start").show()
+  location.reload()
 }
 
 
